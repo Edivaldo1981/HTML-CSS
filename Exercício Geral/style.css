@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "minhaFont";
+    src: url("Fontes/Pokemon\ Hollow.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: rgb(11, 164, 224);
+}
+
+#descricao {
+    border: 10px solid black;
+
+    border-image-source: url("fundo.png");
+    border-image-slice: 28;
+    border-image-repeat: round;
+}
+h1 {
+    background-color: antiquewhite;
+    width: 300px;
+    height: 300px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(0, 255, 85);
+    
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    outline-width: 5px;
+    outline-color: blue;
+    outline-style: solid;
+
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+h2 {
+    font-family: "minhaFont", Courier New, Courier, monospace;
+}
+p {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1:hover {
+    color:burlywood;
+}
+
+h1:focus{
+    color: brown;
+}
+
+h1::first-letter{
+    color:brown;
+}
+
+p::selection{
+    color:aquamarine;
+}
+
+nav {
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.116) ;
+}
+
+nav > a {
+    margin-right: 10px;
+    }
+
+nav > a:hover {
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+}

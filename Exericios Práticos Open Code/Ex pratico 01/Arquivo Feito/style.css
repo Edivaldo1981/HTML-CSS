@@ -1,0 +1,755 @@
+/* ==========================================================================
+   CAFÉ AURORA — style.css
+   Projeto construído apenas com HTML5 e CSS3 (sem Flexbox, sem Grid, sem JS)
+   ========================================================================== */
+
+/* ------------------------- FONTES EXTERNAS ------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ------------------------- VARIÁVEIS GLOBAIS ------------------------- */
+:root {
+    /* Paleta de cores */
+    --cor-creme: #F7EFE3;
+    --cor-bege: #E9DCC7;
+    --cor-marrom-claro: #8B5E3C;
+    --cor-marrom-medio: #6F4630;
+    --cor-marrom-escuro: #3E2723;
+    --cor-verde-escuro: #2C3B2B;
+    --cor-dourado: #C69749;
+    --cor-dourado-claro: #E0B87A;
+    --cor-texto: #3E2723;
+    --cor-branco: #FFFDF9;
+
+    /* Fontes */
+    --font-titulo: 'Playfair Display', Georgia, serif;
+    --font-corpo: 'Poppins', Arial, sans-serif;
+
+    /* Espaçamentos */
+    --espaco-secao: 60px;
+    --raio-padrao: 10px;
+    --sombra-padrao: 0 6px 18px rgba(62, 39, 35, 0.18);
+}
+
+/* ------------------------- RESET BÁSICO ------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Utilizado para que padding e border não aumentem
+                                a largura final dos elementos, facilitando o
+                                cálculo da responsividade em todo o projeto. */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-creme);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.cabecalho {
+    background: linear-gradient(135deg, var(--cor-marrom-escuro) 0%, var(--cor-marrom-medio) 55%, var(--cor-verde-escuro) 100%);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 70px 20px 40px;
+    min-height: 320px;
+    position: relative;
+}
+
+.cabecalho__titulo {
+    font-family: var(--font-titulo);
+    font-size: 3.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 18px;
+}
+
+/* Detalhe decorativo abaixo do título */
+.cabecalho__titulo::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 90px;
+    height: 3px;
+    background-color: var(--cor-dourado);
+    transform: translateX(-50px);
+}
+
+.cabecalho__slogan {
+    font-family: var(--font-titulo);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--cor-dourado-claro);
+    margin-top: 18px;
+}
+
+.cabecalho__descricao {
+    max-width: 560px;
+    margin: 14px auto 0;
+    font-weight: 300;
+    color: var(--cor-bege);
+}
+
+/* ------------------------- MENU DE NAVEGAÇÃO ------------------------- */
+.menu {
+    margin-top: 36px;
+}
+
+.menu__lista {
+    list-style: none;
+    text-align: center;
+}
+
+.menu__lista li {
+    display: inline-block;
+    margin: 0 14px;
+}
+
+.menu__link {
+    font-weight: 500;
+    padding: 8px 4px;
+    position: relative;
+    
+}
+
+/* Sublinhado decorativo animado no menu */
+.menu__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-dourado);
+    transition: width 0.25s ease-in-out;
+}
+
+.menu__link:hover::before,
+.menu__link:focus::before {
+    width: 100%;
+}
+
+.menu__link:hover {
+    color: var(--cor-dourado-claro);
+}
+
+.menu__link:active {
+    color: var(--cor-dourado);
+}
+
+.menu__link:visited {
+    color: var(--cor-branco);
+}
+
+.menu__link:focus {
+    outline: 2px dashed var(--cor-dourado);
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   ESTRUTURA GERAL DAS SEÇÕES
+   ========================================================================== */
+.secao {
+    max-width: 800px;
+    min-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--espaco-secao) 20px;
+}
+
+.secao__titulo {
+    font-family: var(--font-titulo);
+    font-size: 2.1rem;
+    color: var(--cor-marrom-escuro);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.secao__titulo::after {
+    content: "☕";
+    display: block;
+    font-size: 1rem;
+    margin-top: 8px;
+    color: var(--cor-dourado);
+}
+
+/* ==========================================================================
+   SEÇÃO 1 — NOSSA HISTÓRIA
+   ========================================================================== */
+.secao--historia {
+    background-color: var(--cor-branco);
+}
+
+.historia__conteudo h3 {
+    font-family: var(--font-titulo);
+    color: var(--cor-verde-escuro);
+    margin: 26px 0 10px;
+}
+
+.historia__conteudo p {
+    margin-bottom: 16px;
+}
+
+/* Estiliza a primeira letra do parágrafo capitular, como uma letra capitular
+   clássica de publicações impressas */
+.paragrafo-capitular::first-letter {
+    font-family: var(--font-titulo);
+    font-size: 3.2rem;
+    color: var(--cor-dourado);
+    float: left;
+    line-height: 1;
+    padding-right: 8px;
+    font-weight: 700;
+}
+
+/* Estiliza a primeira linha do segundo parágrafo em destaque */
+.paragrafo-destaque::first-line {
+    font-weight: 600;
+    color: var(--cor-marrom-medio);
+}
+
+mark {
+    background-color: var(--cor-dourado-claro);
+    color: var(--cor-marrom-escuro);
+    padding: 0 4px;
+}
+
+blockquote {
+    border-left: 4px solid var(--cor-dourado);
+    background-color: var(--cor-bege);
+    padding: 16px 20px;
+    margin: 20px 0 6px;
+    font-style: italic;
+    border-radius: 0 var(--raio-padrao) var(--raio-padrao) 0;
+}
+
+abbr {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--cor-bege);
+    margin: 30px 0;
+}
+
+/* ==========================================================================
+   SEÇÃO 2 — NOSSA ORIGEM
+   ========================================================================== */
+.secao--origem {
+    text-align: center;
+}
+
+.origem__texto {
+    max-width: 620px;
+    margin: 0 auto 26px;
+}
+
+.origem__imagem {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    border-radius: var(--raio-padrao);
+    box-shadow: var(--sombra-padrao);
+}
+
+/* ==========================================================================
+   SEÇÃO 3 — CARDÁPIO
+   ========================================================================== */
+.secao--cardapio {
+    background-color: var(--cor-branco);
+    border-radius: var(--raio-padrao);
+}
+
+.cardapio__bloco {
+    margin-bottom: 34px;
+}
+
+.cardapio__bloco h3 {
+    font-family: var(--font-titulo);
+    color: var(--cor-verde-escuro);
+    margin-bottom: 12px;
+}
+
+.lista-bebidas {
+    list-style-type: "☕ ";
+    list-style-position: inside;
+    columns: 2;
+}
+
+.lista-bebidas li {
+    padding: 4px 0;
+}
+
+.lista-passos {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.lista-passos li {
+    padding: 5px 0;
+}
+
+.glossario {
+    margin-top: 10px;
+}
+
+.glossario dt {
+    font-weight: 600;
+    color: var(--cor-marrom-medio);
+    margin-top: 14px;
+}
+
+.glossario dd {
+    margin-left: 20px;
+    color: var(--cor-texto);
+}
+
+/* ==========================================================================
+   SEÇÃO 4 — TABELA DE PRODUTOS
+   ========================================================================== */
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra-padrao);
+    border-radius: var(--raio-padrao);
+    overflow: hidden;
+}
+
+.tabela-produtos th,
+.tabela-produtos td {
+    padding: 12px 10px;
+    text-align: left;
+    border: 1px solid var(--cor-bege);
+}
+
+.tabela-produtos th {
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-branco);
+    font-family: var(--font-titulo);
+    font-weight: 700;
+}
+
+.tabela-produtos tr:hover {
+    background-color: var(--cor-bege);
+}
+
+/* ==========================================================================
+   SEÇÃO 5 — EXPERIÊNCIA CAFÉ AURORA
+   ========================================================================== */
+.secao--experiencia {
+    text-align: center;
+}
+
+.experiencia__etiqueta-container {
+    position: relative;
+    display: block;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.experiencia__imagem {
+    width: 100%;
+    display: block;
+    border-radius: var(--raio-padrao);
+    box-shadow: var(--sombra-padrao);
+}
+
+/* Etiqueta "Mais Vendido" posicionada sobre a imagem */
+.etiqueta {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--cor-dourado);
+    color: var(--cor-marrom-escuro);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: var(--sombra-padrao);
+}
+
+.experiencia__texto {
+    max-width: 620px;
+    margin: 0 auto 26px;
+}
+
+.experiencia__audio {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Container responsivo para o vídeo do YouTube */
+.video {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 0;
+    padding-bottom: 39.375%; /* proporção 16:9 sobre max-width de 700px */
+    margin: 20px auto 6px;
+    box-shadow: var(--sombra-padrao);
+    border-radius: var(--raio-padrao);
+    overflow: hidden;
+}
+
+.video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ==========================================================================
+   SEÇÃO 6 — CURIOSIDADES (ASIDE)
+   ========================================================================== */
+.curiosidades {
+    max-width: 700px;
+    min-width: 280px;
+    margin: 0 auto var(--espaco-secao);
+    background-color: var(--cor-bege);
+    padding: 30px 26px;
+    border-radius: var(--raio-padrao);
+    box-shadow: var(--sombra-padrao);
+}
+
+.curiosidades__titulo {
+    font-family: var(--font-titulo);
+    color: var(--cor-marrom-escuro);
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 26px;
+}
+
+.curiosidades__titulo::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: var(--cor-dourado);
+}
+
+.curiosidades__lista {
+    margin: 14px 0 14px 20px;
+}
+
+.curiosidades__lista li {
+    margin-bottom: 6px;
+}
+
+.curiosidades__link {
+    color: var(--cor-marrom-medio);
+    font-weight: 600;
+    border-bottom: 1px dashed var(--cor-marrom-medio);
+}
+
+.curiosidades__link:hover {
+    color: var(--cor-dourado);
+    border-bottom-color: var(--cor-dourado);
+}
+
+/* ==========================================================================
+   SEÇÃO 7 — VOCÊ SABIA? (código e curiosidade técnica)
+   ========================================================================== */
+.secao--tecnica pre {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-bege);
+    padding: 18px;
+    border-radius: var(--raio-padrao);
+    overflow-x: auto;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.secao--tecnica code {
+    font-family: 'Courier New', monospace;
+}
+
+/* ==========================================================================
+   SEÇÃO 8 — BANNER PROMOCIONAL
+   ========================================================================== */
+.banner-promocional {
+    position: relative;
+    background: linear-gradient(120deg, var(--cor-dourado) 0%, var(--cor-marrom-claro) 100%);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 40px 24px;
+    border: 2px solid var(--cor-marrom-escuro);
+    border-radius: var(--raio-padrao);
+    box-shadow: var(--sombra-padrao);
+    overflow: hidden;
+}
+
+.banner-promocional h2 {
+    font-family: var(--font-titulo);
+    font-size: 1.8rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-promocional p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Detalhe decorativo circular, feito apenas com CSS */
+.banner-promocional::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.banner-promocional::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(62, 39, 35, 0.15);
+    border-radius: 50%;
+}
+
+/* ------------------------- ELEMENTO :empty ------------------------- */
+.decoracao {
+    max-width: 800px;
+    min-width: 280px;
+    height: 6px;
+    margin: 40px auto;
+}
+
+.decoracao:empty {
+    background: linear-gradient(90deg, transparent, var(--cor-dourado), transparent);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   SEÇÃO 9 — FORMULÁRIO DE CONTATO
+   ========================================================================== */
+.secao--contato {
+    background-color: var(--cor-branco);
+    border-radius: var(--raio-padrao);
+}
+
+.formulario {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.formulario label {
+    display: block;
+    font-weight: 500;
+    margin: 16px 0 6px;
+    color: var(--cor-marrom-escuro);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-bege);
+    border-radius: 6px;
+    font-family: var(--font-corpo);
+    font-size: 1rem;
+    background-color: var(--cor-creme);
+    color: var(--cor-texto);
+}
+
+.formulario input:hover,
+.formulario select:hover,
+.formulario textarea:hover {
+    border-color: var(--cor-marrom-claro);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--cor-dourado);
+    box-shadow: 0 0 0 3px rgba(198, 151, 73, 0.25);
+}
+
+.formulario__checkbox {
+    margin-top: 20px;
+}
+
+.formulario__checkbox label {
+    display: inline;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.formulario__checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.formulario__checkbox input[type="checkbox"]:checked {
+    accent-color: var(--cor-dourado);
+}
+
+.formulario__botao {
+    display: block;
+    margin: 26px auto 0;
+    padding: 12px 34px;
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 30px;
+    font-family: var(--font-corpo);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formulario__botao:hover {
+    background-color: var(--cor-marrom-escuro);
+}
+
+.formulario__botao:active {
+    background-color: var(--cor-dourado);
+    color: var(--cor-marrom-escuro);
+}
+
+.formulario__botao:focus {
+    outline: 2px dashed var(--cor-dourado);
+    outline-offset: 3px;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-bege);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.rodape__nome {
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+    margin-bottom: 8px;
+}
+
+.rodape__redes {
+    margin: 16px 0;
+}
+
+.rodape__link {
+    margin: 0 10px;
+    font-weight: 500;
+    color: var(--cor-dourado-claro);
+}
+
+.rodape__link:hover {
+    color: var(--cor-branco);
+}
+
+.rodape__link:visited {
+    color: var(--cor-dourado-claro);
+}
+
+.rodape__mensagem {
+    margin-top: 14px;
+    color: var(--cor-bege);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE — TABLET
+   ========================================================================== */
+@media (max-width: 800px) {
+    .cardapio__grade > .cardapio__bloco {
+        width: 100%;
+    }
+
+    .lista-bebidas {
+        columns: 1;
+    }
+
+    .cabecalho__titulo {
+        font-size: 2.6rem;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE — SMARTPHONE
+   ========================================================================== */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 46px 16px 30px;
+        min-height: 260px;
+    }
+
+    .cabecalho__titulo {
+        font-size: 2rem;
+    }
+
+    .cabecalho__slogan {
+        font-size: 1.05rem;
+    }
+
+    .secao__titulo {
+        font-size: 1.6rem;
+    }
+
+    .menu__lista li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .tabela-produtos {
+        font-size: 0.82rem;
+    }
+
+    .tabela-produtos th,
+    .tabela-produtos td {
+        padding: 8px 6px;
+    }
+
+    .paragrafo-capitular::first-letter {
+        font-size: 2.4rem;
+    }
+
+    .banner-promocional h2 {
+        font-size: 1.4rem;
+    }
+
+    .formulario__botao {
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexível</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <h1>Comportamento Flexível da Imagem</h1>
+    <p>Esta imagem se ajusta ao tamanho da tela, mantendo suas proporções:</p>
+    <picture>
+        <source srcset="paisagem-p.png" media="(max-width: 750px)" type="image/png">
+        <source srcset="paisagem-m.png" media="(max-width: 1050px)" type="image/png">
+        <img src="paisagem-g.png" alt="Imagem Flexível">
+    </picture>      
+    <h2>Agora vamos colocar um áudio na página</h2>
+    <audio controls loop preload="metadata">
+        <source src="audio/guanacast-33.mp3" type="audio/mpeg">
+        <p>Seu navegador não suporta o elemento de áudio.</p>
+</body>
+</html>

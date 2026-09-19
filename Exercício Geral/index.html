@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio Geral HTML e CSS</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon">
+
+        <nav>
+            <a href="www.google.com" rel="Buscar"  target="_blank">Buscar</a>
+            <a href="www.youtube.com" rel="Externo" target="_blank">Assistir</a>
+        </nav>
+    </head>
+    <body>
+        <main>
+            <h1>Exercício Acumulativo</h1>
+            <h2 id = "descricao">Descrição:</h2>
+            <p>Um exercício acumulativo é um conteúdo que vai crescendo conforme o conteúdo da matería vai crescendo, a ideia repeti-lo diariamente para fixar os conceitos aprendidos.</p>
+
+            <p>Cria uma <strong><i>horizontal</i></strong></p>
+            <hr>
+            <section>
+                <p>Agora vamos aprender a expressar as <strong><em>palavras reservadas</em></strong></p>
+                <ul>
+                    <li> Para expressar &gt que é uma palavra reservada, usamos (& g t = greather than) tudo junto</li>
+                    <li> Para expressar &lt que é uma palavra reservada, usamos (& l t = less than) tudo junto</li>
+                    <li> Para expressar &amp que é uma palavra reservada, usamos (& a m p = ampersand) tudo junto</li>
+                    <li> Para expressar &quot que é uma palavra reservada, usamos (& q u o t = quotation mark) tudo junto</li>
+                    <li> Para expressar &apos; que é uma palavra reservada, usamos (& a p o s = apostrophe) tudo junto</li>
+                    <li> Para expressar &reg que é uma palavra reservada, usamos (& r e g = registered) tudo junto</li>
+                </ul>
+            </section>
+            
+            <hr>  
+            <section>
+                <h2>Colocando Emogis</h2>
+                <p>Para colocar Emogis, deverá ser seguidos os passos:</p>
+                <ul>
+                    <li>Adicionar "&#"</li>
+                    <li>Adicionar o código do Emoji</li>
+                    <li>Este é um exemplo &#X1F596</li>
+                </ul>
+            </section>  
+                        
+            <hr>
+           <section>
+                <h2>Trabalhando com imagens</h2>
+                <p>Agora vou adicionar uma imagem ao código armazenada localmente</p>
+                <img src="Imagens/thumb-hardware.png" alt="Imagem Hardware">
+                <p>Agora vamos aprender a colocar uma imagem dinâmica na página</p>
+                
+                <picture>
+                    <source media="(max-width: 750px)" srcset="Imagens/paisagem-p.png" type="image/png">
+                    <source media="(max-width: 1050px)" srcset="Imagens/paisagem-m.png" type="image/png">
+                    <img src="Imagens/paisagem-g.png" alt="Imagem Flexível">
+                </picture>
+           </section>
+
+            <hr>
+            <section>
+                <h2>Formatação adicionais em </h2>
+                <ul>
+                    <li>&lt;mark&gt;<mark> Faz um destaque no texto como um marca texto;</mark></li>
+                    <li>&lt;small&gt;<small> Diminui o tamanho da letra;</small></li>
+                    <li>&lt;del&gt;<del> Marca um texto como excluido;</del></li
+                    <li>&lt;ins&gt;<ins> Indica que um texto foi inserido;</ins></li>
+                    <li>&lt;u&gt;<u> Indica um texto sublinhado;</u></li>
+                    <li>&lt;sup&gt; Indica um número que fica em cima x<sup>2</sup>+3;</li>
+                    <li>&lt;sub&gt;Indica um número subscrito H<sub>2</sub>O;</li>
+                    <li>&lt;code&gt;<code> Indica que um texto é um código <code>function x (int a, int b);</code></li>
+                    <li>&lt;pre&gt; Indica um texto pré formatado A mesma formatação será levada para o HTML;</li>
+                    <li>&lt;q&gt;<q> Indica que um texto é uma citação, <q>Isto é uma citação</q>;</li>
+                    <li>&lt;blockquote&gt; Indica um citação grande de um outro autor:</li>
+                    <p>exemplo</p>
+                        <blockquote>Isto é um citação longa de outra pessoa Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolor, reiciendis nemo maiores sequi natus quod provident itaque reprehenderit rerum sed unde nostrum quae tempora est ipsam quo iste velit.</blockquote>
+                    <li>&lt;abbr&gt; Utilizada para trazer o significado de uma cigla, Exemplo: <abbr title="Significado Completo">Sign</abbr></li>                    
+                </ul>
+            </section>
+            <hr>
+            <section>
+                <H2>Listas em HTML</H2>
+                <P>Existem vários tipos de listas em HTML</P>
+                <P>Listas ordenadas</P>
+                    <ol type="a">
+                        <li>Açucar</li>
+                        <li>Café</li>
+                        <li>Pão</li>
+                    </ol>
+                <p>Listas não ordenadas</p>
+                    <ul type="square">
+                        <li>Açucar</li>
+                        <li>Café</li>
+                        <li>Pão</li>
+                    </ul>
+            </section>
+            <hr>
+            <section>
+                <p>listas Mistas ou de Definição</p>
+                <p>Exemplo de Lista de Definição</p>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>Linguagem de Marcação para criação de Conteúdo de um site</dd>
+                    </dl>
+            </section>
+            <hr>
+            <section>
+                <p>Trabalhando com Links (Ankors)</p>
+                <a href="www.google.com" target="_blank" rel="external">Acesse o google</a>
+                <a href="Documentos/Boleto.pdf" download="Nome do Arquivo" type="application.pdf">link para baixar um documento</a>
+            </section>
+            <hr>
+           <section>
+                <p>Agora vamos colocar audios em nossos HTML</p>
+                <p>Este é um exemplo de texto simples</p> 
+                <audio src="audio 1/guanacast-33.mp3" controls></audio>
+                <p>Este é um exemplo de audio com varios sources</p>
+                <audio controls>
+                    <source src="audio/guanacast-33.mp3" type="audio/mpeg">
+                    <source src="audio/happy-mistake.mp3" type="audio/mpeg">
+                    <p>Seu navegador não suporta áudio</p>
+                </audio>
+           </section>
+
+            <hr>
+            <section>
+                <p>Agora vamos trabalhar com videos</p>
+                <p>Vídeo armazenado localmente</p>
+                <video width="640" height="360" controls loop>
+                    <source src="midia 1/11005883-Hd 1920 1080 30Fps.mp4" type="video/mp4">
+                    <source src="midia 1/11005883-Hd 1920 1080 30Fps.webm" type="video/webm">
+                    <source src="midia 1/11005883-hd_1920_1080_30fps.ogv" type="video/ogv">
+                    <p>Seu navegador não suporta videos</p>
+                </video>
+                <p>Este é um video externo</p>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/h54S1u672t0?si=ZPMg6AyRU5aPDuM9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+        </main>   
+    
+    </body>
+</html>

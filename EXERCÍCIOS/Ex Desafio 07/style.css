@@ -1,0 +1,13 @@
+#index {
+    background-color: #ccc;
+}
+
+#green {
+    background-color: rgb(123, 226, 123);
+    color: rgb(72, 126, 21);
+}
+
+#yellow {
+    background-color: rgb(226, 226, 123);
+    color: rgb(110, 126, 21);
+}
