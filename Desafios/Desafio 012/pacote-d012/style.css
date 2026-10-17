@@ -5,6 +5,7 @@
 
 body{
     margin: 0px;
+    padding: 0px;
 }
 
 header{
@@ -18,7 +19,7 @@ header{
 #titulo{
     font-family: "Passion One", sans-serif;
     padding-top: 50px;
-    font-size: 70px;
+    font-size: 95px;
 }
 
 #subtitulo{
