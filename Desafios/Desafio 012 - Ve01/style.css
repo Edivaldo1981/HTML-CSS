@@ -1,23 +1,169 @@
-@charset 'UTF-8';
+
+/* ==================================================
+   1. CONFIGURAÇÕES INICIAIS
+   ================================================== */
+
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-:root{
-    --titulos: "Passion One", sans-serif;
-    --estrofes: "Sriracha", cursive;
-    --outros: Verdana, Geneva, Tahoma, sans-serif;
+
+/* ==================================================
+   2. VARIÁVEIS GLOBAIS
+   ================================================== */
+
+:root {
+    --font-titulo: "Passion One", sans-serif;
+    --font-texto: "Sriracha", cursive;
+    --font-padrao: Verdana, Geneva, Tahoma, sans-serif;
+
+    --cor-fundo: darkgray;
+    --cor-escura: black;
+    --cor-clara: white;
+
+    --espacamento-padrao: 30px;
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
-    font-size: 1em;    
+
+/* ==================================================
+   3. RESET CSS
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body, html{
+
+/* ==================================================
+   4. CONFIGURAÇÕES GERAIS
+   ================================================== */
+
+html,
+body {
     min-height: 100vh;
-    background-color: darkgray;
-    font-family: var(--outros);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--font-padrao);
+}
+
+
+/* ==================================================
+   5. CABEÇALHO
+   ================================================== */
+
+header {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-family: var(--font-titulo);
+    font-variant: small-caps;
+    font-size: 10vw;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+
+/* ==================================================
+   6. LINKS
+   ================================================== */
+
+header a,
+footer a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   7. SEÇÕES DE CONTEÚDO
+   ================================================== */
+
+section {
+    padding: 10vh 0 10vh var(--espacamento-padrao);
+
+    font-family: var(--font-texto);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    line-height: 2em;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+
+/* ==================================================
+   8. SEÇÕES COM FUNDO NORMAL
+   ================================================== */
+
+section.normal {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+}
+
+
+/* ==================================================
+   9. SEÇÕES COM IMAGENS
+   ================================================== */
+
+section.imagem {
+    background-color: rgb(36, 36, 36);
+    color: var(--cor-clara);
+
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: cover;
+
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.68);
+}
+
+
+/* Texto sobre as imagens */
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+
+    background-color: rgba(0, 0, 0, 0.371);
+    text-shadow: 1px 1px 0px black;
+}
+
+
+/* Imagem específica de cada seção */
+
+section#imagem01 {
+    background-image: url(pacote-d012/imagens/background001.jpg);
+}
+
+section#imagem02 {
+    background-image: url(pacote-d012/imagens/background002.jpg);
+}
+
+
+/* ==================================================
+   10. RODAPÉ
+   ================================================== */
+
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 10px;
 }
