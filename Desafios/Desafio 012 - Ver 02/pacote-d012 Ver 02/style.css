@@ -25,31 +25,108 @@
    /* ==================================================
    3. RESET CSS
    ================================================== */
-
+   *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;      
+   }
+   
    /* ==================================================
    4. CONFIGURAÇÕES GERAIS
    ================================================== */
+   body,
+   html{
+      min-height: 100vw;
+   
+   }
+
+   body{
+      background-color: var(--cor-fundo);
+      font-family: var(--font-padrao);
+   }
 
    /* ==================================================
    5. CABEÇALHO
    ================================================== */
+   header{
+      background-color: var(--cor-escura);
+      text-align: center
+   }
 
+   header > h1{
+      font-family: var(--font-titulo);
+      font-size: 10vw;
+      color: var(--cor-clara);
+      font-variant: small-caps;
+      padding-top: 50px;
+   }
+
+   header > p{
+      color: var(--cor-clara);
+   }
+   
    /* ==================================================
    6. LINKS
    ================================================== */
+   header a,
+   footer a{
+      color: var(--cor-clara);
+      text-decoration: none;
+   }
 
+   header a:hover,
+   footer a:hover{
+      text-decoration: underline;
+   } 
    /* ==================================================
    7. SEÇÕES DE CONTEÚDO
    ================================================== */
-
+   section{
+      padding: 10vh 0 10vh var(--espacamento-padrão);
+      line-height: 2em; 
+      font-family: var(--font-texto);
+      font-size: clamp(1.5rem, 3.5vW, 3rem);
+      
+   }
+   section p{
+      padding-bottom: 2em;
+   }
    /* ==================================================
    8. SEÇÕES COM FUNDO NORMAL
    ================================================== */
-
+   section.normal{
+      background-color: var(--cor-clara);
+   }
    /* ==================================================
    9. SEÇÕES COM IMAGENS
    ================================================== */
+   section.imagem{
+      background-position: right center;
+      background-size: cover;
+      background-attachment: fixed;
+   }
+
+   section.imagem > p{
+      background-color: rgba(0, 0, 0, 0.397);
+      display: inline-block;
+      color: var(--cor-clara);
+   }
+
+   section#imagem01{
+      background-image: url(imagens/background001.jpg);
+   }
+
+   section#imagem02{
+      background-image: url(imagens/background002.jpg);
+   }
 
    /* ==================================================
    10. RODAPÉ
    ================================================== */
+   footer{
+      background-color: black;
+      color: var(--cor-clara);
+      text-align: center;
+      padding: 10px 0 10px 0;
+      font-weight: bolder;
+   }

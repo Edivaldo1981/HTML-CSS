@@ -98,7 +98,6 @@ footer a:hover {
 
 section {
     padding: 10vh 0 10vh var(--espacamento-padrao);
-
     font-family: var(--font-texto);
     font-size: clamp(1.5rem, 3.5vw, 3rem);
     line-height: 2em;
