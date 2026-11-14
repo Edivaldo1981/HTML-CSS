@@ -4,6 +4,7 @@ Table{
     border-collapse: collapse;
     width: 600px;
     text-align: center;
+    position: relative;
 }
 caption{
     font-size: 30px;
@@ -11,6 +12,13 @@ caption{
     background-color: rgb(194, 192, 192);
     height: 40px;
     font-family: sans-serif;
+}
+
+thead > tr > th{
+    position: sticky;
+    top: -1px;
+    background-color: gray;
+
 }
 
 td, th{
@@ -26,6 +34,12 @@ th{
 
 td.number{
     text-align: right;
+}
+
+tfoot td{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
 }
 
 tbody tr:nth-child(2n){
