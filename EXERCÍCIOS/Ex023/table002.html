@@ -3,80 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha primeira tabela</title>
+    <title>Uso de Tabelas Grandes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <header class="cabecalho">
-            <h1>RELATÓRIO DE VENDAS</h1>
-            <P>DEPARTAMENTO COMERCIAL</P>
-            <hr>
-        </header>
-        <section>
-            <div class="informacoes">
-                <h2>Desempenho Comercial</h2>
-                <span>Fechado</span>
-            </div>
-            <p>Unidade: Lisboa · Novembro/2026</p>
-        </section>
-        <section class="tablecontainer">
-            <table>
-                <colgroup>
-                    <col id="vendedor">
-                    <col id="meta">
-                    <col id="vendas">
-                    <col id="atingimento">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th rowspan="2">VENDEDOR</th>
-                        <th rowspan="2">META</th>
-                        <th>RESULTADO</th>
-                    </tr>
-                    <tr>
-                        <th class="col">VENDAS</th>
-                        <th class="col">ATINGIMENTO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ana</td>
-                        <td>&euro; 5.000</td>
-                        <td>&euro; 5.000</td>
-                        <td>110%</td>
-                    </tr>
-                    <tr>
-                        <td>Bruno</td>
-                        <td>&euro; 6.000</td>
-                        <td>&euro; 5.400</td>
-                        <td>90%</td>
-                    </tr>
-                    <tr>
-                        <td>Carlos</td>
-                        <td>&euro; 4.000</td>
-                        <td>&euro; 4.800</td>
-                        <td>120%</td>
-                    </tr>
-                    <tr>
-                        <td>Mariana</td>
-                        <td>&euro; 7.000</td>
-                        <td>&euro; 7.700</td>
-                        <td>110%</td>
-                    </tr>
-                    <tr>
-                        <td>Pedro</td>
-                        <td>&euro; 3.000</td>
-                        <td>&euro; 2.400</td>
-                        <td>80%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <footer>
-            <p>Total de Vendedores: 05</p>
-            <p>Relatório interno</p>
-        </footer>
-    </main>
+    <h1>Uso de Tabelas Grandes</h1>
+    <table>
+        <thead>
+                <th>Unidade Federativa</th>
+                <th>População</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="number">46 179 008</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="number">21 460 311</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>
+                TOTAL
+            </th>
+            <td class="number">64 587 554</td>
+        </tfoot>
+    </table>
+    
 </body>
 </html>
