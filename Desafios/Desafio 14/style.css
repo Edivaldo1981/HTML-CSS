@@ -1,0 +1,27 @@
+table{
+    width: 600px;
+    border-collapse: collapse;
+}
+
+.cabecalho{
+    background-color: gray;
+}
+
+th, td{
+    border: 1px solid black;
+    text-align: center;
+    height: 40px;
+}
+
+#especial{
+    text-align: left;
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+
+}
+#especialn{
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+}
