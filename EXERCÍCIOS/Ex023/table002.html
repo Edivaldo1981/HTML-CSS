@@ -9,9 +9,10 @@
 <body>
     <h1>Uso de Tabelas Grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-                <th>Unidade Federativa</th>
-                <th>População</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col" style="width: 100px;">População</th>
         </thead>
         <tbody>
             <tr>
@@ -22,9 +23,17 @@
                 <td>Minas Gerais</td>
                 <td class="number">21 460 311</td>
             </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="number">17 225 410</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="number">14 889 472</td>
+            </tr>
         </tbody>
         <tfoot>
-            <th>
+            <th scope="row">
                 TOTAL
             </th>
             <td class="number">64 587 554</td>

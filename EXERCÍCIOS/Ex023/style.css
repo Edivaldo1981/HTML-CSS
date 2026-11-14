@@ -5,6 +5,13 @@ Table{
     width: 600px;
     text-align: center;
 }
+caption{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(194, 192, 192);
+    height: 40px;
+    font-family: sans-serif;
+}
 
 td, th{
     border: 1px solid black;
@@ -20,3 +27,8 @@ th{
 td.number{
     text-align: right;
 }
+
+tbody tr:nth-child(2n){
+    background-color: rgb(193, 193, 236);
+}
+
