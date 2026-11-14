@@ -1,48 +1,10 @@
-@charset 'UTF-8';
-
-Table{
+table{
+    width: 400px;
     border-collapse: collapse;
-    width: 600px;
-    text-align: center;
-    position: relative;
-}
-caption{
-    font-size: 30px;
-    font-weight: bold;
-    background-color: rgb(194, 192, 192);
-    height: 40px;
-    font-family: sans-serif;
 }
 
-thead > tr > th{
-    position: sticky;
-    top: -1px;
-    background-color: gray;
-
-}
-
-td, th{
+td{
     border: 1px solid black;
-    height: 40px;
-    
+    text-align: center;
+    height: 50px;
 }
-
-th{
-    background-color: gray;
-    color: white;
-}
-
-td.number{
-    text-align: right;
-}
-
-tfoot td{
-    background-color: gray;
-    color: white;
-    font-weight: bold;
-}
-
-tbody tr:nth-child(2n){
-    background-color: rgb(193, 193, 236);
-}
-
